@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=BhuTuka+Expanded+One&display=swap');
+
+/*kfñkfkefkekgekgkeg*/
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    height: 100%;
+}
+
+body{
+    font-family: 'BhuTuka Expanded One', cursive;
+    font-size: 1.6rem;
+    color: rgb(2, 2, 2);
+    min-height: 100%;
+}
+
+
+.Grid-Container > * {
+    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+.header {
+    grid-area: header;
+    background-color: aqua;
+}
+
+.navbar {
+    grid-area: navbar;
+    background-color: blue;
+}
+
+.main{
+    grid-area: main;
+    background-color: greenyellow;
+}
+
+.sidebar{
+    grid-area: sidebar;
+    background-color: brown;
+
+}
+
+.footer{
+    grid-area: footer;
+    background-color: blueviolet;
+}
+
+.Grid-Container{
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+    "header"
+    "navbar"
+    "main"
+    "sidebar"
+    "footer";
+
+}
+
+@media (min-width: 100px) {
+        .Grid-Container{
+            /*grid-template-columns: 200px auto;
+            grid-template-rows: 100px 50px auto 100px;
+            /*grid-template-areas: 
+            "header   header" 
+            "navbar   navbar" 
+            "sidebar  main"   
+            "footer   footer" 
+            ;*/
+
+
+            grid-template:
+            "header   header" 100PX
+            "navbar   navbar" 60PX
+            "sidebar  main"   auto
+            "footer   footer" 100px /
+            200px     auto
+            ;
+    }
+}
+
+@media (min-width: 900px ) {
+
+    .Grid-Container{
+        grid-template:
+        "header   header   header" 100PX
+        "navbar   main     sidebar"  auto
+        "footer   footer   footer" 100px /
+        200px     auto     200px
+        ;
+
+    }
+            
+            
+}
+
+
+
+    
